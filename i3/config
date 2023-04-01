@@ -23,7 +23,7 @@ font pango:JetBrainsMono 10
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xrandr --output Virtual1  --mode 1920x1080
-exec --no-startup-id feh --bg-scale /home/castro/Pictures/pexels-eberhard-grossgasteiger-691668.jpg
+exec --no-startup-id feh --bg-scale /home/castro/Imágenes/pexels-eberhard-grossgasteiger-691668.jpg
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
 gaps inner 3
