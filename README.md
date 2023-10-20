@@ -1,6 +1,5 @@
 # dotfiles
 
-- Distro: Fedora
-- Window manager: i3
-- Terminal: Kitty 
-- Nerd Font: JetBrains Mono
+My dotfiles. 
+
+Dotfiles [stow guide](https://www.jakewiesler.com/blog/managing-dotfiles) by Jake Wiesler️
