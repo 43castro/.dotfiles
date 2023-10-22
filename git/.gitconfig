@@ -2,3 +2,6 @@
 [user]
     name = castro
     email = xcaze8@gmail.com
+
+[init]
+    defaultBranch = main
