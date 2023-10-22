@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 ff() {
   local dir
-  dir=$(find /Users/castro -type d -maxdepth 3 ! -name '.*' | fzf)
+  dir=$(find /Users/castro/Development -type d -maxdepth 3 ! -name '.*' | fzf)
   if [ -n "$dir" ]; then
     cd "$dir" || return
     clear  # Clear the terminal screen
