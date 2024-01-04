@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 ff() {
   local dir
-  dir=$(find /Users/castro/Development -type d -maxdepth 3 ! -name '.*' | fzf)
+  dir=$(find $HOME/Development -type d -maxdepth 3 ! -name '.*' | fzf)
   if [ -n "$dir" ]; then
     cd "$dir" || return
     clear  # Clear the terminal screen
