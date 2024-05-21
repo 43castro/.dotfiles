@@ -4,6 +4,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -113,3 +117,10 @@ ff() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+PATH=~/.console-ninja/.bin:$PATH
+
+alias bagheera="ssh castro@bagheera"
+alias ga="git add ."
+export PATH=/Users/castro/.console-ninja/.bin:/Users/castro/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/castro/.console-ninja/.bin:/Users/castro/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/castro/.cargo/bin:/opt/homebrew/opt/fzf/bin:/path/to/go/bin
+export PATH=/Users/castro/.console-ninja/.bin:/Users/castro/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/castro/.console-ninja/.bin:/Users/castro/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/castro/.cargo/bin:/opt/homebrew/opt/fzf/bin:/path/to/go/bin:/path/to/go/bin
