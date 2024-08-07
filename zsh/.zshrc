@@ -75,7 +75,6 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-zsh-autosuggestions
 zsh-syntax-highlighting
 )
 
@@ -87,8 +86,6 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
@@ -103,9 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
 ff() {
   local dir
   dir=$(find $HOME/Development -type d -maxdepth 3 ! -name '.*' | fzf)
@@ -117,10 +112,12 @@ ff() {
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+bindkey -s '^F' 'ff\n'
 
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 PATH=~/.console-ninja/.bin:$PATH
 
 alias bagheera="ssh castro@bagheera"
 alias ga="git add ."
-export PATH=/Users/castro/.console-ninja/.bin:/Users/castro/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/castro/.console-ninja/.bin:/Users/castro/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/castro/.cargo/bin:/opt/homebrew/opt/fzf/bin:/path/to/go/bin
-export PATH=/Users/castro/.console-ninja/.bin:/Users/castro/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/usr/local/go/bin:/Users/castro/.console-ninja/.bin:/Users/castro/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/castro/.cargo/bin:/opt/homebrew/opt/fzf/bin:/path/to/go/bin:/path/to/go/bin
