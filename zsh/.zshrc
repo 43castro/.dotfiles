@@ -78,6 +78,8 @@ plugins=(git
 zsh-syntax-highlighting
 )
 
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
