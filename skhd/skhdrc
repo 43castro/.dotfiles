@@ -1,0 +1,3 @@
+
+ctrl - e : SwitchAudioSource -s "EVO4"
+ctrl - r : SwitchAudioSource -s "BenQ EX2780Q"
