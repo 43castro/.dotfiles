@@ -123,3 +123,4 @@ PATH=~/.console-ninja/.bin:$PATH
 
 alias bagheera="ssh castro@bagheera"
 alias ga="git add ."
+alias magnet="osascript $HOME/Development/automation/scripts/magnet.applescript"
