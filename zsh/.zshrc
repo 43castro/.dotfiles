@@ -124,3 +124,13 @@ PATH=~/.console-ninja/.bin:$PATH
 alias bagheera="ssh castro@bagheera"
 alias ga="git add ."
 alias magnet="osascript $HOME/Development/automation/scripts/magnet.applescript"
+
+#Set default download directory
+YTDL_DOWNLOAD_DIR=~/Downloads/yt-dlp
+
+# Alias to download the highest quality video with audio in .mov format
+alias ytdl_mov='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]" --merge-output-format mov -P "$YTDL_DOWNLOAD_DIR"'
+
+# Alias to download the highest quality audio in .wav format
+alias ytdl_wav='yt-dlp -f bestaudio --extract-audio --audio-format wav -P "$YTDL_DOWNLOAD_DIR"'
+
