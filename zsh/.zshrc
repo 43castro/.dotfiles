@@ -123,7 +123,10 @@ PATH=~/.console-ninja/.bin:$PATH
 
 alias bagheera="ssh castro@bagheera"
 alias ga="git add ."
+alias gc="git commit"
+alias gs="git status"
 alias magnet="osascript $HOME/Development/automation/scripts/magnet.applescript"
+
 
 #Set default download directory
 YTDL_DOWNLOAD_DIR=~/Downloads/yt-dlp
