@@ -12,7 +12,28 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# Theme
+# Custom Zsh Theme Configuration
+
+# Function to retrieve current Git branch and status
+function git_prompt_info() {
+  ref=$(git symbolic-ref --short HEAD 2>/dev/null) || return
+  echo "git:($ref$(parse_git_dirty))"
+}
+
+# Function to check if the working directory has uncommitted changes
+function parse_git_dirty() {
+  [[ -n $(git status --porcelain 2>/dev/null) ]] && echo " ✗"
+}
+
+# Prompt Configuration
+PROMPT='%{$fg_bold[white]%}➜ %{$fg[white]%}%c%{$reset_color%} $(git_prompt_info) '
+
+# Optional: Configure colors for Git prompt elements
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[white]%}git:(%{$fg[white]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[white]%}) %{$fg[white]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[white]%})"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
