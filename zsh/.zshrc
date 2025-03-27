@@ -13,27 +13,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # Theme
-# Custom Zsh Theme Configuration
-
-# Function to retrieve current Git branch and status
-function git_prompt_info() {
-  ref=$(git symbolic-ref --short HEAD 2>/dev/null) || return
-  echo "git:($ref$(parse_git_dirty))"
-}
-
-# Function to check if the working directory has uncommitted changes
-function parse_git_dirty() {
-  [[ -n $(git status --porcelain 2>/dev/null) ]] && echo " ✗"
-}
-
-# Prompt Configuration
-PROMPT='%{$fg_bold[white]%}➜ %{$fg[white]%}%c%{$reset_color%} $(git_prompt_info) '
-
-# Optional: Configure colors for Git prompt elements
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[white]%}git:(%{$fg[white]%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[white]%}) %{$fg[white]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[white]%})"
+ZSH_THEME="castro"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -96,8 +76,8 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[white]%})"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-zsh-syntax-highlighting
 )
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
