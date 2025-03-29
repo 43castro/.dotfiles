@@ -117,6 +117,35 @@ ff() {
 
 bindkey -s '^F' 'ff\n'
 
+# Function to open a file or folder from the external drive CZM2
+open_czm2() {
+  local drive_path="/Volumes/CZM2"
+
+  # Check if the external drive is mounted
+  if [[ ! -d "$drive_path" ]]; then
+    echo "Drive CZM2 is not mounted."
+    return 1
+  fi
+
+  # Use find to list files and folders (max depth 3), excluding system files
+  local selection
+  selection=$(find "$drive_path" -maxdepth 3 -mindepth 1 \
+    ! -path "*/.*" ! -name ".DS_Store" 2>/dev/null | fzf --prompt="Select a file or folder: ")
+
+  # If nothing was selected, exit
+  [[ -z "$selection" ]] && return 1
+
+  # Open the selected file or folder
+  open "$selection"
+  
+  # Clear the terminal session
+  clear
+}
+
+# Bind the function to Ctrl+B
+bindkey -s '^B' 'open_czm2\n'
+
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
