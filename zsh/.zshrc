@@ -134,12 +134,12 @@ open_czm2() {
 
   # If nothing was selected, exit
   [[ -z "$selection" ]] && return 1
-
-  # Open the selected file or folder
-  open "$selection"
   
   # Clear the terminal session
   clear
+
+  # Open the selected file or folder
+  open "$selection"
 }
 
 # Bind the function to Ctrl+B
