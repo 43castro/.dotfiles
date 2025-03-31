@@ -145,6 +145,30 @@ open_czm2() {
 # Bind the function to Ctrl+B
 bindkey -s '^B' 'open_czm2\n'
 
+# Function to open a file or folder from the external drive CZM2
+open_home() {
+  local drive_path="$HOME"
+
+  # Use find to list files and folders (max depth 3), excluding system files
+  local selection
+  selection=$(find "$drive_path" -maxdepth 3 -mindepth 1 \
+    ! -path "*/.*" ! -name ".DS_Store" 2>/dev/null | fzf --prompt="Select a file or folder: ")
+
+  # If nothing was selected, exit
+  [[ -z "$selection" ]] && return 1
+  
+  # Clear the terminal session
+  clear
+
+  # Open the selected file or folder
+  open "$selection"
+}
+
+# Bind the function to Ctrl+B
+bindkey -s '^H' 'open_home\n'
+
+
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
