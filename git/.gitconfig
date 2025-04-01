@@ -1,7 +1,7 @@
 # This is Git's per-user configuration file.
 [user]
     name = castro
-    email = xcaze8@gmail.com
+    email = 105855412+43castro@users.noreply.github.com
 
 [init]
     defaultBranch = main
