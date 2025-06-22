@@ -180,7 +180,7 @@ alias ga="git add ."
 alias gc="git commit"
 alias gs="git status"
 alias magnet="osascript $HOME/Development/automation/scripts/magnet.applescript"
-
+alias serverdown="ssh -t castro@bagheera 'sudo shutdown -h now'"
 
 #Set default download directory
 YTDL_DOWNLOAD_DIR=~/Downloads/yt-dlp
