@@ -129,7 +129,7 @@ open_czm2() {
 
   # Use find to list files and folders (max depth 3), excluding system files
   local selection
-  selection=$(find "$drive_path" -maxdepth 3 -mindepth 1 \
+  selection=$(find "$drive_path" -maxdepth 1\
     ! -path "*/.*" ! -name ".DS_Store" 2>/dev/null | fzf --prompt="Select a file or folder: ")
 
   # If nothing was selected, exit
@@ -167,27 +167,6 @@ open_home() {
 # Bind the function to Ctrl+B
 bindkey -s '^H' 'open_home\n'
 
-
-
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-PATH=~/.console-ninja/.bin:$PATH
-
 alias bagheera="ssh castro@bagheera"
-alias ga="git add ."
-alias gc="git commit"
-alias gs="git status"
-alias magnet="osascript $HOME/Development/automation/scripts/magnet.applescript"
 alias serverdown="ssh -t castro@bagheera 'sudo shutdown -h now'"
-
-#Set default download directory
-YTDL_DOWNLOAD_DIR=~/Downloads/yt-dlp
-
-# Alias to download the highest quality video with audio in .mov format
-alias ytdl_mov='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]" --merge-output-format mov -P "$YTDL_DOWNLOAD_DIR"'
-
-# Alias to download the highest quality audio in .wav format
-alias ytdl_wav='yt-dlp -f bestaudio --extract-audio --audio-format wav -P "$YTDL_DOWNLOAD_DIR"'
 
