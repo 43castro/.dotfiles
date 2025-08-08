@@ -12,6 +12,6 @@ cmd + alt - 5 : open -a Spotify
 
 # Bindings for Cmd + Shift + Option (second layer)
 cmd + shift + alt - 1 : open -a "DaVinci Resolve"
-cmd + shift + alt - 2 : open -a "Final Cut Pro"
-cmd + shift + alt - 3 : open -a "Affinity Designer 2"
+cmd + shift + alt - 2 : open -a "Soundly"
+cmd + shift + alt - 3 : open -a "Logic Pro"
 
