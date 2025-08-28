@@ -4,8 +4,8 @@ ctrl - r : SwitchAudioSource -s "BenQ EX2780Q"
 
 # Bindings for Cmd + Option (first layer)
 alt - a : open -a Finder
-alt - q : open -a "/Applications/Things3.app"
-alt - w : open -a Ghostty
+alt - w : open -a "/Applications/Things3.app"
+alt - q : open -a Ghostty
 alt - e : open -a Zen
 alt - r : open -a Obsidian
 alt - t : open -a Spotify
