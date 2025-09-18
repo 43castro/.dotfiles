@@ -3,16 +3,18 @@ ctrl - e : SwitchAudioSource -s "EVO4"
 ctrl - r : SwitchAudioSource -s "BenQ EX2780Q"
 
 # Bindings for Cmd + Option (first layer)
-alt - a : open -a Finder
-alt - w : open -a "/Applications/Things3.app"
 alt - q : open -a Ghostty
+alt - w : open -a "/Applications/Things3.app"
 alt - e : open -a Zen
 alt - r : open -a Obsidian
-alt - t : open -a Spotify
+
+alt - a : open -a Finder
+alt - s : open -a Spotify
+alt - d : open -a "Spark"
+alt - f : open -a Calendar
 
 # Bindings for Cmd + Shift + Option (second layer)
 alt + shift - q : open -a "DaVinci Resolve"
 alt + shift - w : open -a "Soundly"
 alt + shift - e : open -a "Logic Pro"
-alt + shift - r : open -a "Spark"
 
