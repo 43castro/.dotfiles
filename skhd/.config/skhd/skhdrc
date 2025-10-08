@@ -1,5 +1,5 @@
 # Volume quick-switch toggle
-ctrl - e : SwitchAudioSource -s "EVO4"
+ctrl - e : SwitchAudioSource -s "iFi (by AMR) HD USB Audio Output"
 ctrl - r : SwitchAudioSource -s "BenQ EX2780Q"
 
 # Bindings for Cmd + Option (first layer)
@@ -9,8 +9,8 @@ alt - e : open -a Zen
 alt - r : open -a Obsidian
 
 alt - a : open -a Finder
-alt - s : open -a Spotify
-alt - d : open -a "Spark"
+alt - s : open -a "Spark"
+alt - d : open -a "Qobuz"
 alt - f : open -a Calendar
 
 # Bindings for Cmd + Shift + Option (second layer)
