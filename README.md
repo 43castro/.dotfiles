@@ -11,3 +11,4 @@ My dotfiles have the config for the following:
 	- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
 - My [Ghostty](https://ghostty.org/) config and theme
 - [neovim ](https://neovim.io/) theme and plugins 
+- My [SKHD](https://github.com/koekeishiya/skhd) config for navigation
